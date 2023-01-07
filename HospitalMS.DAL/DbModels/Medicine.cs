@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HospitalMS.DAL.DbModels
 {
-    public class Medicine
+    public class Medicine: Base
     {
         public string Name { get; set; }
         public string Company { get; set; }
