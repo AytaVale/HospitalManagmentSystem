@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory.Database;
 
 namespace HospitalMS.DAL.Data
 {
@@ -20,5 +21,13 @@ namespace HospitalMS.DAL.Data
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<Medicine> Medicines { get; set; }
 
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Appointment>()
+        //        .HasOne(a => a.Hospital)
+        //        .WithMany(p => p.Appointments)
+        //        .HasForeignKey(a => a.HospitalId)
+        //        .OnDelete(DeleteBehavior.Restrict);
+        }
     }
-}
+
